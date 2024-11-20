@@ -10,9 +10,9 @@ dotenv.config({ path: "./config/config.env" });
 
 app.use(
   cors({
-    origin: "*",
-    methods: ["POST"],
-    credentials: true,
+    origin: process.env.FRONTEND_URL || "*", // Fallback to allow all origins if FRONTEND_URL is not defined
+    methods: ["POST", "GET", "PUT", "DELETE"], // Allow necessary methods
+    credentials: true, // Ensure frontend requests send cookies if needed
   })
 );
 
