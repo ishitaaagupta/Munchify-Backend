@@ -13,9 +13,11 @@ const FRONTEND_URL =
     ? "https://munchify-frontend.vercel.app"
     : "http://localhost:5173";
 
+console.log("FRONTEND_URL", FRONTEND_URL);
+
 app.use(
   cors({
-    origin: FRONTEND_URL, // Fallback to allow all origins if FRONTEND_URL is not defined
+    origin: "*", // Fallback to allow all origins if FRONTEND_URL is not defined
     methods: ["POST", "GET", "PUT", "DELETE"], // Allow necessary methods
     // credentials: true, // Ensure frontend requests send cookies if needed
   })
