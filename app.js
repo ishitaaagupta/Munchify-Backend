@@ -10,7 +10,7 @@ dotenv.config({ path: "./config/config.env" });
 
 const FRONTEND_URL =
   process.env.NODE_ENV === "production"
-    ? "https://munchify-frontend.vercel.app/"
+    ? "https://munchify-frontend.vercel.app"
     : "http://localhost:5173";
 
 app.use(
